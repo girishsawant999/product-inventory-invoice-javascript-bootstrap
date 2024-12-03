@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Invoice</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <div class="sidebar bg-light p-3" style="width: 250px; height: 100vh">
+        <h4>Inventory</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="create.html" class="nav-link">Create Product</a>
+          </li>
+          <li class="nav-item">
+            <a href="list.html" class="nav-link">Product List</a>
+          </li>
+          <li class="nav-item">
+            <a href="invoice.html" class="nav-link">Create Invoice</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content flex-grow-1 p-4">
+        <h2>Create Invoice</h2>
+        <form id="invoiceForm">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="customerName" class="form-label">Customer Name</label>
+              <input
+                type="text"
+                id="customerName"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="productSelect" class="form-label"
+                >Select Product</label
+              >
+              <select id="productSelect" class="form-select" required>
+                <!-- Options will be dynamically added here -->
+              </select>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="productCategory" class="form-label"
+                >Product Category</label
+              >
+              <input
+                type="text"
+                id="productCategory"
+                class="form-control"
+                disabled
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="productName" class="form-label">Product Name</label>
+              <input
+                type="text"
+                id="productName"
+                class="form-control"
+                disabled
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="brandName" class="form-label">Brand Name</label>
+              <input type="text" id="brandName" class="form-control" disabled />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="modelName" class="form-label">Model Name</label>
+              <input type="text" id="modelName" class="form-control" disabled />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="modelNumber" class="form-label">Model Number</label>
+              <input
+                type="text"
+                id="modelNumber"
+                class="form-control"
+                disabled
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="uom" class="form-label">UOM</label>
+              <input type="text" id="uom" class="form-control" disabled />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="warranty" class="form-label">Warranty</label>
+              <input type="text" id="warranty" class="form-control" disabled />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="quantity" class="form-label">Quantity</label>
+              <input
+                type="number"
+                id="quantity"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="text" id="price" class="form-control" disabled />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="gst" class="form-label">GST(In Percentage)</label>
+              <input type="text" id="gst" class="form-control" disabled />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="totalPrice" class="form-label">Total Price</label>
+              <input
+                type="text"
+                id="totalPrice"
+                class="form-control"
+                disabled
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Invoice</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/invoice.js"></script>
+  </body>
+</html>
